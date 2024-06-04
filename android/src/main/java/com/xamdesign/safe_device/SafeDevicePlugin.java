@@ -29,7 +29,7 @@ public class SafeDevicePlugin implements FlutterPlugin, MethodCallHandler {
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
 
         this.context = binding.getApplicationContext();
-        onStart();
+
         final MethodChannel channel = new MethodChannel(
                 binding.getBinaryMessenger(),
                 "safe_device"
