@@ -74,16 +74,7 @@ public class SafeDevicePlugin implements FlutterPlugin, MethodCallHandler {
             result.success(DevelopmentModeCheck.developmentModeCheck(context));
         } else if (call.method.equals("usbDebuggingCheck")) {
             result.success(DevelopmentModeCheck.usbDebuggingCheck(context));
-        } else if (call.method.equals("isMockLocation")) {
-            if (locationAssistantListener.isMockLocationsDetected()) {
-                result.success(true);
-            } else if (locationAssistantListener.getLatitude() != null && locationAssistantListener.getLongitude() != null) {
-                result.success(false);
-            } else {
-                locationAssistantListener = new LocationAssistantListener(context);
-                result.success(true);
-            }
-        } else {
+        }} else {
             result.notImplemented();
         }
     }
