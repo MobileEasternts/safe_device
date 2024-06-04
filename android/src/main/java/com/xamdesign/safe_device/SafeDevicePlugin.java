@@ -60,7 +60,7 @@ public class SafeDevicePlugin implements FlutterPlugin, MethodCallHandler {
             result.success(DevelopmentModeCheck.developmentModeCheck(context));
         } else if (call.method.equals("usbDebuggingCheck")) {
             result.success(DevelopmentModeCheck.usbDebuggingCheck(context));
-        }} else {
+        } else {
             result.notImplemented();
         }
     }
